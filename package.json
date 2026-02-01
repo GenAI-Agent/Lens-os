@@ -1,0 +1,57 @@
+{
+  "name": "@lens-os/sdk",
+  "version": "0.1.3",
+  "description": "Lens OS Frontend AI Agent SDK",
+  "main": "./dist/index.mjs",
+  "module": "./dist/index.mjs",
+  "types": "./dist/index.d.mts",
+  "exports": {
+    ".": {
+      "import": "./dist/index.mjs",
+      "types": "./dist/index.d.mts"
+    },
+    "./react": {
+      "import": "./dist/react/index.mjs",
+      "types": "./dist/react/index.d.mts"
+    }
+  },
+  "files": [
+    "dist",
+    "README.md"
+  ],
+  "scripts": {
+    "build": "tsup",
+    "dev": "tsup --watch",
+    "typecheck": "tsc --noEmit",
+    "prepublishOnly": "bun run build",
+    "release": "bun run build && npm publish --access public",
+    "publish:patch": "bun run build && npm version patch && npm publish --access public",
+    "publish:minor": "bun run build && npm version minor && npm publish --access public",
+    "publish:major": "bun run build && npm version major && npm publish --access public"
+  },
+  "peerDependencies": {
+    "react": ">=18.0.0",
+    "openai": ">=4.0.0"
+  },
+  "peerDependenciesMeta": {
+    "react": {
+      "optional": true
+    }
+  },
+  "devDependencies": {
+    "typescript": "^5.0.0",
+    "tsup": "^8.0.0",
+    "@types/node": "^20.0.0",
+    "@types/react": "^18.0.0",
+    "react": "^18.0.0",
+    "openai": "^4.0.0"
+  },
+  "keywords": [
+    "lens-os",
+    "ai-agent",
+    "frontend-sdk",
+    "openai"
+  ],
+  "author": "Lens OS",
+  "license": "MIT"
+}
