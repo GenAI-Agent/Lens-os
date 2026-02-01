@@ -53,5 +53,13 @@
     "openai"
   ],
   "author": "Lens OS",
-  "license": "MIT"
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/GenAI-Agent/Lens-os.git"
+  },
+  "bugs": {
+    "url": "https://github.com/GenAI-Agent/Lens-os/issues"
+  },
+  "homepage": "https://github.com/GenAI-Agent/Lens-os#readme"
 }
